@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quito - Vebsite with Video Background</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo"></a>
+    <div class="right">
+      <div class="btns dayNight">
+        <ion-icon name="moon-outline"></ion-icon>
+        <ion-icon name="sunny-outline"></ion-icon>
+      </div>
+      <div class="btns menuToggle">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+      </div>
+    </div>
+  </header>
+  <ul class="navigation">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="https://www.google.com.ec/maps/place/Centro+Hist%C3%B3rico,+Quito/@-0.2187764,-78.5209876,15z/data=!4m5!3m4!1s0x91d59a29b566ea0d:0xfee3077329b5374d!8m2!3d-0.2188216!4d-78.5135489?hl=es" target="_blank">Visítanos</a></li>
+    <li><a href="https://www.tripadvisor.es/Attractions-g294308-Activities-Quito_Pichincha_Province.html" target="_blank">Turismo</a></li>
+    <li><a href="https://www.tripadvisor.es/Restaurants-g294308-Quito_Pichincha_Province.html" target="_blank">Gastronomía</a></li>
+
+  </ul>
+  <section class="main">
+    <!-- Video Source -->
+    <!-- https://www.youtube.com/watch?v=82DGiVa6eyc -->
+    <video src="Quito_film.mp4" autoplay muted loop type="mp4"></video>
+    <img src="mask.jpg" class="mask">
+    <h2>UIO</h2>
+    <p class="text">© LF</p>
+    <ul class="sci">
+      <li><a href="https://visitquito.ec/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+      <li><a href="https://visitquito.ec/" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+      <li><a href="https://visitquito.ec/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    </ul>
+  </section>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    let menuToggle = document.querySelector('.menuToggle');
+    let dayNight = document.querySelector('.dayNight');
+    let body = document.querySelector('body');
+    let navigation = document.querySelector('.navigation');
+    menuToggle.onclick = function(){
+      menuToggle.classList.toggle('active')
+      navigation.classList.toggle('active')
+    }
+    dayNight.onclick = function(){
+      dayNight.classList.toggle('active')
+      body.classList.toggle('dark')
+    }
+  </script>
+</body>
+</html>
